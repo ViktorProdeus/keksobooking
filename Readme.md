@@ -1,7 +1,7 @@
-# Личный проект «{{projectTitle}}»
+# Личный проект «Кексобукинг»
 
-- Студент: [Victor Prodeus]({{https://github.com/ViktorProdeus}}).
-- Наставник: `Неизвестно`.
+- Студент: [Victor Prodeus](https://github.com/ViktorProdeus)
+- Наставник: `Неизвестно`
 
 ---
 
