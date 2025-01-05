@@ -6,8 +6,19 @@ import {
   shuffle,
 } from './utils.js';
 
+const CARD_TEMPLATE = document
+  .querySelector('#card')
+  .content.querySelector('.popup');
+
 const COUNT = 10;
 const APARTMENT_TYPES = ['palace', 'flat', 'house', 'bungalow', 'hotel'];
+const apartmentsMap = {
+  palace: 'Дворец',
+  flat: 'Квартира',
+  house: 'Дом',
+  bungalow: 'Бунгало',
+  hotel: 'Отель',
+};
 const FEATURES = [
   'wifi',
   'dishwasher',
@@ -30,7 +41,7 @@ const PHOTOS = [
   'https://assets.htmlacademy.ru/content/intensive/javascript-1/keksobooking/claire-rendall-b6kAwr1i0Iw.jpg',
 ];
 
-function createRentalAdd() {
+function generateCardData() {
   const location = getLocation(
     getRandomFloat(35.65, 35.7, 5),
     getRandomFloat(139.7, 139.8, 5)
@@ -55,6 +66,12 @@ function createRentalAdd() {
   };
 }
 
-const rentalAdds = Array.from({ length: COUNT }, createRentalAdd);
+const generateCardsData = () => Array.from({ length: COUNT }, generateCardData);
 
-export { rentalAdds };
+export {
+  generateCardData,
+  generateCardsData,
+  apartmentsMap,
+  COUNT,
+  CARD_TEMPLATE,
+};
