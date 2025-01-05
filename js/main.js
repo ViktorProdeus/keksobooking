@@ -1,2 +1,5 @@
-// eslint-disable-next-line no-unused-vars
-import { rentalAdds } from './data.js';
+import { renderCards } from './render.js';
+
+const container = document.querySelector('.map__canvas');
+
+renderCards(container);
